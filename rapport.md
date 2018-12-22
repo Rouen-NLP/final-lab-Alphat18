@@ -9,7 +9,7 @@ Ce rapport présentera tout d'abord une analyse détaillée des textes utilisé 
 
 Les données fournies pour le TP sont regroupées dans un dossier nommé _"data/Tobacco3482-OCR"_. A l'intérieur de ce dossier, on trouve 10 sous dossier nommé respectivement: "_Advertisement_, _Email_, _Form_, _Letter_, _Memo_, _News_, _Note_, _Report_, _Resume_ et _Scientific_". Chacun de ces dossier regroupe en fait les textes par catégories. Ce sont par ailleurs ces catégories que nous allons chercher à prédire grâce à notre classifieur.
 
-final-lab-Alphat18/images/nb_documents.png
+![number of documents histogram](final-lab-Alphat18/images/nb_documents.png)
 
 Le nombre de texte par catégorie n'est pas identique. Il varie assez fortement, ce qui peut avoir des répercusions sur la qualité de l'apprentissage pour certaines catégories. On peut voir le nombre de textes par catégorie sur l'histogramme suivant:On y voit clairement cette disparité. Par exemple, la catégorie "_Memo_" (la plus fournie) possède 620 textes tandis que la catégorie "_Resume_" n'en possède que 120.
 
