@@ -123,13 +123,17 @@ L'optimisation se fait par recherche exhaustive de l'espace des paramètres, ce 
 
 Après optimisation des paramètres, on obtient pour la représentation **Bag of Words** le rapport de classification suivant:
 
-**CLASSIFICATION REPORT**
+![number of documents histogram](images/bw.PNG)
+
+![number of documents histogram](images/conf_bw.png)
 
 On voit donc que le **f1 score** est de **0.72** en moyenne. Ces résultats varient légèrement en fonction du découpage aléatoire du corpus en jeu d'apprentissage et jeu de test.
 
 Pour la représentation **TF-IDF**, les résultats sont comparables dans l'ensemble:
 
-**CLASSIFICATION REPORT**
+![number of documents histogram](images/tf.PNG)
+
+![number of documents histogram](images/conf_tf.PNG)
 
  Nous obtenons un **f1 score** qui tourne autour de **0.71**.
 Dans les deux cas, les cores en fonction des catégories varie énormément. Certaines catégories donnent de très bon résultats, notamment la catégorie "_Resume_" qui donne presque toujours un score parfait de 1 ou encore "_Email_" (souvent proche de 0.8-0.9). Au contraire, la catégories "_Note_" est presque toujours la plus basse (0.3-0.4) et la classification des "_Report_" est souvent médiocre (plutôt proche de 0.5-0.6).
