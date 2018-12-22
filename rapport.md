@@ -76,15 +76,15 @@ Avant toute chose, l'utilisation brute du texte pour l'entrainnement d'un classi
 
 Mais ces caractéristiquent s'avèrent malgré tout assez limitées. Il existe en effet des représentations plus évoluées et efficaces. La plus simple d'entre elles et une des plus utilisées (elle correspond en quelque sorte à la méthode _historique_ de l'éxtraction de caractéristiques dans du texte) est le **Bag of Words** (Sac de Mots). Cette méthode revient à compter le nombre d'instances de certains mots clés dans un texte. Ces mots clés sont tout simplement les mots les plus présents dans le corpus en général. Un texte sera donc représenté par  un vecteur de dimension le nombre de mots clés utilisés. Ce vecteur sera notamment le plus souvent assez vide (beaucoup de valeurs seront nulles), d'où l'utilisation de matrices **sparses** pour la création de la matrice de caractéristiques afin d'accélerer les calculs. 
 
-![number of documents histogram](images/bw.png)
+![number of documents histogram](images/BOW1.PNG)
 
 Une alternative efficace au Bag of Words est la représentation **TF-IDF** (Term Frequency - Inverse Document Frequency). Il fonctionne de la même manière mais applique en plus une pénalisation basé sur la fréquence du mot dans le corpus. Cela permet de donner plus d'importance à des mots plus significatifs. Par exemple, le mot _the_ en anglais est de très loin le mot le plus fréquent alors qu'il ne comporte que peu d'information quand à la catégorie d'un texte comparé à d'autres mots tels que _letter_ ou _sincerely_.
 
-**TF-IDF EXAMPLE**
+![number of documents histogram](images/TFIDF.PNG)
 
 Une autre amélioration possible du Bag of Words est l'utilisation des **N-grams**. Un N-gram est simplement un arrangement de N mots ensemble. Si on considère un seul mot, comme dans la version initiale du Bag of Words, on parle d'uni-gram. Deux mots ensembles (tels que _vast majority_) correspondent à un bi-gram... L'introduction des N-grams dans la représentation peut permettre d'accorder plus d'importance au lien entre certains mots.
 
-**N-GRAM EXAMPLE**
+![number of documents histogram](images/BOW2.PNG)
 
 Il existe bien évidement de très nombreuses autres représentations pour le texte. Plus récement, des avancées ont été faites sur des nouveaux modèles qui semblent très efficaces, tel que le **Word Embedding** avec notamment le modèle **Word2Vec**. De même, la représentation à l'aide d'arbres semble donner des résultats intéressant. Par ailleurs, nous ne nous intéresseront pas en détail à ces techniques dans ce rapport pour des raisons de temps et de complexité.
 
