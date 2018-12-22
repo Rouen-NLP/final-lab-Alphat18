@@ -133,7 +133,7 @@ Pour la représentation **TF-IDF**, les résultats sont comparables dans l'ensem
 
 ![number of documents histogram](images/tf.PNG)
 
-![number of documents histogram](images/conf_tf.PNG)
+![number of documents histogram](images/conf_tf.png)
 
  Nous obtenons un **f1 score** qui tourne autour de **0.71**.
 Dans les deux cas, les cores en fonction des catégories varie énormément. Certaines catégories donnent de très bon résultats, notamment la catégorie "_Resume_" qui donne presque toujours un score parfait de 1 ou encore "_Email_" (souvent proche de 0.8-0.9). Au contraire, la catégories "_Note_" est presque toujours la plus basse (0.3-0.4) et la classification des "_Report_" est souvent médiocre (plutôt proche de 0.5-0.6).
