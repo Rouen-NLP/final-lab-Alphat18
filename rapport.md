@@ -15,7 +15,7 @@ Le nombre de texte par catégorie n'est pas identique. Il varie assez fortement,
 
 Mais le nombre de textes peut facilement être compensé par le nombre de mots présents dans ces textes. En effet, même si une catégorie comme "_Email_" possède beaucoup de textes, ceux-ci s'avèrent en fait assez court dans l'ensemble par rapport à d'autres catégories (106.8 mots en moyenne contre 627.8 pour la catégorie "_News_").
 
-**IMAGE Average Words**
+![number of documents histogram](images/nb_words.png)
 
 Cette disparité dans le nombre de mots par catégorie risque d'influencer les résultats du classifieur. Par contre, par rapport à la disparité de taille des catégories, le nombre de mots par catégorie peut au contraire s'avérer comme une caractéristique intéressante pour prédire la catégorie. Un texte très court d'environ 50 mots aura bien plus de chance d'être une "_Note_" qu'une "_News_" par exemple.
 
@@ -76,7 +76,7 @@ Avant toute chose, l'utilisation brute du texte pour l'entrainnement d'un classi
 
 Mais ces caractéristiquent s'avèrent malgré tout assez limitées. Il existe en effet des représentations plus évoluées et efficaces. La plus simple d'entre elles et une des plus utilisées (elle correspond en quelque sorte à la méthode _historique_ de l'éxtraction de caractéristiques dans du texte) est le **Bag of Words** (Sac de Mots). Cette méthode revient à compter le nombre d'instances de certains mots clés dans un texte. Ces mots clés sont tout simplement les mots les plus présents dans le corpus en général. Un texte sera donc représenté par  un vecteur de dimension le nombre de mots clés utilisés. Ce vecteur sera notamment le plus souvent assez vide (beaucoup de valeurs seront nulles), d'où l'utilisation de matrices **sparses** pour la création de la matrice de caractéristiques afin d'accélerer les calculs. 
 
-**BOW EXAMPLE**
+![number of documents histogram](images/bw.png)
 
 Une alternative efficace au Bag of Words est la représentation **TF-IDF** (Term Frequency - Inverse Document Frequency). Il fonctionne de la même manière mais applique en plus une pénalisation basé sur la fréquence du mot dans le corpus. Cela permet de donner plus d'importance à des mots plus significatifs. Par exemple, le mot _the_ en anglais est de très loin le mot le plus fréquent alors qu'il ne comporte que peu d'information quand à la catégorie d'un texte comparé à d'autres mots tels que _letter_ ou _sincerely_.
 
